@@ -1,11 +1,13 @@
 React + gitpod testing
 ======================
 
+ [Gitpod link](https://gitpod.io/#https://github.com/datachi7d/react-gitpod-test)
+
 ### Initial setup notes
 
 #### Gitpod config
 
- TODO
+ See [`.gitpod`](.gitpod) and [`.gitpod.Dockerfile`](.gitpod.Dockerfile)
 
 #### Setup react npm stuff
 
