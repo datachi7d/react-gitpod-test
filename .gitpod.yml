@@ -3,7 +3,7 @@ image:
 
 tasks:
   - init: cd hello-world && npm install
-    command: cd hello-world && npm start
+    command: npm start
 
 ports:
   - port: 3000
