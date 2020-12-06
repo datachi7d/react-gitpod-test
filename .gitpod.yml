@@ -2,9 +2,12 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: cd hello-world && npm install
-    command: cd hello-world; npm start
+  - init: cd front-end && npm install && cd ../back-end && npm install
+    command: cd front-end; npm start
+    command: cd back-end; npm start
 
 ports:
   - port: 3000
     onOpen: open-preview
+  - port: 3001
+    onOpen: notify

@@ -3,7 +3,8 @@ import './App.css';
 // eslint-disable-next-line
 import { Form, TextField, SelectField, SubmitButton, LeafletMap } from './FormElements';
 import * as Yup from 'yup';
-import "./App.css"
+import "yup-phone";
+import "./App.css";
 import 'leaflet/dist/leaflet.css';
 import 'milligram/dist/milligram.css';
 
@@ -11,6 +12,12 @@ const formSchema = {
     name: {
         type: "text",
         label: "Name",
+        required: true
+    },
+    phone: {
+        // type: "phone",
+        type: "text",
+        label: "Phone",
         required: true
     },
     email: {
@@ -51,6 +58,8 @@ function App() {
                 _validationSchema[key] = Yup.string();
             }else if(formSchema[key].type === "email"){
                 _validationSchema[key] = Yup.string().email()
+            // }else if(formSchema[key].type === "phone"){
+            //     _validationSchema[key] = Yup.string().phone().required()
             }else if(formSchema[key].type === "select"){
                 _validationSchema[key] = Yup.string().oneOf(formSchema[key].options.map(o => o.value));
             }
