@@ -3,14 +3,12 @@ image:
 
 tasks:
   - init: cd back-end && npm install
-    name: Init back-end
+    command: cd back-end; npm start
+    name: Back-end
   - init: cd front-end && npm install
     name: Init front-end
-  - command: cd front-end; npm start
-    name: Start front end
-  - command: cd back-end; npm start
-    name: Start back end
-    openMode: split-right
+    command: cd front-end; npm start
+    openMode: split-right    
 
 ports:
   - port: 3000
