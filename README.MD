@@ -3,7 +3,7 @@ React + gitpod testing
 
  [Gitpod link](https://gitpod.io/#https://github.com/datachi7d/react-gitpod-test)
 
- [src/App.js](hello-world/src/App.js)
+ Front end: [src/App.js](front-end/src/App.js)
 
 ### Initial setup notes
 
@@ -18,3 +18,8 @@ React + gitpod testing
     npx create-react-app hello-world
     cd hello-world
     npm start
+
+#### Setup express
+
+    mkdir back-end && cd back-end
+    npx express-generator
