@@ -7,7 +7,7 @@ tasks:
     name: Back-end
   - init: cd front-end && npm install
     name: Front-end
-    command: cd front-end; PORT=3000 npm start
+    command: cd front-end; PORT=3000 REACT_APP_SUBMIT_URL=https://3001-${GITPOD_WORKSPACE_URL#https://}/submit npm start
     openMode: split-right    
 
 ports:
