@@ -2,9 +2,15 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: cd front-end && npm install && cd ../back-end && npm install
-    command: cd front-end; npm start
-    command: cd back-end; npm start
+  - init: cd back-end && npm install
+    name: Init back-end
+  - init: cd front-end && npm install
+    name: Init front-end
+  - command: cd front-end; npm start
+    name: Start front end
+  - command: cd back-end; npm start
+    name: Start back end
+    openMode: split-right
 
 ports:
   - port: 3000
