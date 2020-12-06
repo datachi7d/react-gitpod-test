@@ -70,7 +70,7 @@ export function SubmitButton(props){
     const { isSubmitting } = useFormikContext();
     
     return (
-        <button type="submit" {...rest} disabled={isSubmitting}>{label}</button>
+        <button type="submit" {...rest} disabled={isSubmitting} >{label}</button>
     )
 }
 

@@ -99,6 +99,14 @@ function App() {
     const onSubmit = (values, { setSubmitting, resetForm, setStatus }) => {
         console.log(values);
         setSubmitting(false);
+
+        fetch(process.env.REACT_APP_SUBMIT_URL, {
+            method: 'POST',
+            body: JSON.stringify(values),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
     }
 
     return (
@@ -108,6 +116,7 @@ function App() {
                 initialValues={formData}
                 validationSchema={validationSchema}
                 onSubmit={onSubmit}
+                action={process.env.REACT_APP_SUBMIT_URL}
             >
                 {Object.keys(formSchema).map( (key, ind) => (
                     <div key={key}>
