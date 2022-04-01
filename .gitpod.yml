@@ -13,5 +13,7 @@ tasks:
 ports:
   - port: 8080
     onOpen: open-preview
+    visibility: public
   - port: 3001
     onOpen: notify
+    visibility:  public
